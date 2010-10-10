@@ -599,10 +599,10 @@
       window.addEventListener("load", resize, true);
 
       // FIXME: Dirty hack ...
-      if(navigator.userAgent.match(/Firefox\/3\../)) {
-        init();
-        } else {
+      if(navigator.userAgent.match(/Chrome/)) {
         window.addEventListener("load", init, true);
+      } else {
+        init();
       }
 
       window.addEventListener("keydown", function(e) {
